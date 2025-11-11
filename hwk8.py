@@ -85,15 +85,6 @@ def run_dijkstra(graph:dict[str|None,dict[str,float]|None], start:str, finish:st
     return path
 
 
-# #Main:
-# graph = {'start': {'a': 6, 'b': 2}, 'a': {'fin': 1}, 'b': {'a': 3, 'fin': 5}, 'fin': {}}
-# path = run_dijkstra(graph, 'start', 'fin')
-# print("The shortest path is", path)
-# graph2 = {'Book': {'LP': 5, 'Poster': 0}, 'LP': {'Bass': 15, 'Drum':20}, 'Poster': {'Bass':20, 'Drum':35}, 
-#           'Drum': {'Piano':10}, 'Bass': {'Piano':20}, 'Piano': {}}
-# path2 = run_dijkstra(graph2, 'Book', 'Piano')
-# print("The shortest path is", path2)
-
 def main():
     graph:dict[str|None,dict[str,float]|None] = {}
     graph['Ford'] = {'Parking Lot':1, 'Gym':0.7, 'Menden':0, 'Bass':1, 'Seelye':0}
@@ -113,19 +104,19 @@ def main():
     graph['Wright'] = {'Neilson':0.2, 'Campus Center':0.2}
     graph['Campus Center'] = {'Neilson':0.6, 'Wright':0.2}
 
-    print(f"From Ford to Neilson: {run_dijkstra(graph, 'Ford', 'Neilson')}")
+    # print(f"From Ford to Neilson: {run_dijkstra(graph, 'Ford', 'Neilson')}")
 
-    print(f"From Ford to Botanic Garden: {run_dijkstra(graph, 'Ford', 'Botanic Garden')}")
+    # print(f"From Ford to Botanic Garden: {run_dijkstra(graph, 'Ford', 'Botanic Garden')}")
 
-    print(f"From Bass to Campus Center: {run_dijkstra(graph, 'Bass', 'Campus Center')}")
+    # print(f"From Bass to Campus Center: {run_dijkstra(graph, 'Bass', 'Campus Center')}")
 
-    print(f"From Ford to Hatfield: {run_dijkstra(graph, 'Ford', 'Hatfield')}")
+    # print(f"From Ford to Hatfield: {run_dijkstra(graph, 'Ford', 'Hatfield')}")
 
-    print(f"From Ford to Bass: {run_dijkstra(graph, 'Ford', 'Bass')}")
+    # print(f"From Ford to Bass: {run_dijkstra(graph, 'Ford', 'Bass')}")
 
-    print(f"From Ford to Ford: {run_dijkstra(graph, 'Ford', 'Ford')}")
+    # print(f"From Ford to Ford: {run_dijkstra(graph, 'Ford', 'Ford')}")
 
-    print(f"From Ford to X: {run_dijkstra(graph, 'Ford', 'X')}")
+    # print(f"From Ford to X: {run_dijkstra(graph, 'Ford', 'X')}")
 
     start = input("Enter the start node: ").strip()
     finish = input("Enter the destination node: ").strip()
@@ -144,31 +135,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# the graph
-# graph = {}
-# graph["start"] = {}
-# graph["start"]["a"] = 6
-# graph["start"]["b"] = 2
-
-# graph["a"] = {}
-# graph["a"]["fin"] = 1
-
-# graph["b"] = {}
-# graph["b"]["a"] = 3
-# graph["b"]["fin"] = 5
-
-# graph["fin"] = {}
-
-# the costs table
-# infinity = float("inf")
-# costs = {}
-# costs["a"] = 6
-# costs["b"] = 2
-# costs["fin"] = infinity
-
-# the parents table
-# parents = {}
-# parents["a"] = "start"
-# parents["b"] = "start"
-# parents["fin"] = None
