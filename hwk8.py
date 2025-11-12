@@ -87,12 +87,12 @@ def run_dijkstra(graph:dict[str|None,dict[str,float]|None], start:str, finish:st
 
 def main():
     graph:dict[str|None,dict[str,float]|None] = {}
-    graph['Ford'] = {'Parking Lot':1, 'Gym':0.7, 'Menden':0, 'Bass':1, 'Seelye':0}
+    graph['Ford'] = {'Parking Lot':1, 'Gym':0.7, 'Menden hall':0, 'Bass':1, 'Seelye':0}
     graph['Parking Lot'] = {'Ford':1}
     graph['Gym'] = {'Ford':0.7, 'Sage':0.2}
-    graph['Menden']  = {'Ford':0, 'Sage':0}
+    graph['Menden hall']  = {'Ford':0, 'Sage':0}
     graph['Bass'] = {'Ford':1, 'McConnell':0.1, 'Alumni Gym':0.1, 'Neilson':0.6, 'Burton-Sabin-Reed':0.1}
-    graph['Sage'] = {'Gym':0.2, 'Menden':0, 'Botanic Garden':0.7}
+    graph['Sage'] = {'Gym':0.2, 'Menden hall':0, 'Botanic Garden':0.7}
     graph['Seelye'] = {'Ford':0, 'Alumni Gym':0.3, 'Hillyer':0.1}
     graph['Alumni Gym'] = {'Seelye':0.3, 'Bass':0.1}
     graph['Hillyer'] = {'Seelye':0.1, 'Hatfield':0}
